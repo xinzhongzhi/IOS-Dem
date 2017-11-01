@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" userLabel="ViewController">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MP7-Sw-Ye2">
+                    <rect key="frame" x="56.5" y="318.5" width="62" height="30"/>
+                    <state key="normal" title="钉钉好友"/>
+                    <connections>
+                        <action selector="dingdingFriend:" destination="-1" eventType="touchUpInside" id="qs4-w1-FjC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9C3-J5-W3n">
+                    <rect key="frame" x="148.5" y="318.5" width="77" height="30"/>
+                    <state key="normal" title="手机通讯录"/>
+                    <connections>
+                        <action selector="phoneAdress:" destination="-1" eventType="touchUpInside" id="1cu-yT-G3s"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLM-Aq-4g6">
+                    <rect key="frame" x="255.5" y="318.5" width="62" height="30"/>
+                    <state key="normal" title="我的群组"/>
+                    <connections>
+                        <action selector="myFlock:" destination="-1" eventType="touchUpInside" id="Npp-Zr-1FC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhE-T5-Ydh">
+                    <rect key="frame" x="156" y="398.5" width="62" height="30"/>
+                    <state key="normal" title="企业主页"/>
+                    <connections>
+                        <action selector="companyFirstP:" destination="-1" eventType="touchUpInside" id="PoG-Hg-L8B"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kLM-Aq-4g6" firstAttribute="leading" secondItem="9C3-J5-W3n" secondAttribute="trailing" constant="30" id="33v-IH-kOa"/>
+                <constraint firstItem="9C3-J5-W3n" firstAttribute="leading" secondItem="MP7-Sw-Ye2" secondAttribute="trailing" constant="30" id="48W-9y-WLi"/>
+                <constraint firstItem="OhE-T5-Ydh" firstAttribute="centerX" secondItem="9C3-J5-W3n" secondAttribute="centerX" id="FrB-MW-Mif"/>
+                <constraint firstItem="9C3-J5-W3n" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gei-2N-lOR"/>
+                <constraint firstItem="9C3-J5-W3n" firstAttribute="centerY" secondItem="MP7-Sw-Ye2" secondAttribute="centerY" id="iIG-iT-3Tq"/>
+                <constraint firstItem="OhE-T5-Ydh" firstAttribute="top" secondItem="9C3-J5-W3n" secondAttribute="bottom" constant="50" id="lGz-PI-zE4"/>
+                <constraint firstItem="kLM-Aq-4g6" firstAttribute="centerY" secondItem="9C3-J5-W3n" secondAttribute="centerY" id="rAg-Sd-Ok8"/>
+                <constraint firstItem="9C3-J5-W3n" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="t0W-Pn-RUq"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

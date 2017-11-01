@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="adressBookViewController">
+            <connections>
+                <outlet property="mainSearchBar" destination="uQJ-Ru-aAR" id="j1t-o5-2GV"/>
+                <outlet property="mainTableView" destination="1dA-XQ-szq" id="Yb1-lZ-VpX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fC1-eq-VLC">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqd-Na-ZeY">
+                            <rect key="frame" x="14" y="19" width="51" height="43"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="51" id="AtQ-OV-XaB"/>
+                                <constraint firstAttribute="height" constant="43" id="P77-at-jQc"/>
+                            </constraints>
+                            <state key="normal" title="返回"/>
+                            <connections>
+                                <action selector="backBtnClick:" destination="-1" eventType="touchUpInside" id="fHQ-wv-OKq"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机通讯录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXm-JC-b3d">
+                            <rect key="frame" x="144" y="30" width="87" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8WF-b7-nQp">
+                            <rect key="frame" x="0.0" y="63" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="lsb-2P-37O"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="aqd-Na-ZeY" firstAttribute="top" secondItem="fC1-eq-VLC" secondAttribute="top" constant="19" id="8Qc-Qb-31A"/>
+                        <constraint firstItem="PXm-JC-b3d" firstAttribute="centerY" secondItem="aqd-Na-ZeY" secondAttribute="centerY" id="J7y-qo-Fa6"/>
+                        <constraint firstAttribute="bottom" secondItem="8WF-b7-nQp" secondAttribute="bottom" id="JTC-wF-Qa5"/>
+                        <constraint firstAttribute="trailing" secondItem="8WF-b7-nQp" secondAttribute="trailing" id="VA2-TK-8m7"/>
+                        <constraint firstItem="PXm-JC-b3d" firstAttribute="centerX" secondItem="fC1-eq-VLC" secondAttribute="centerX" id="XYL-MZ-4cO"/>
+                        <constraint firstItem="aqd-Na-ZeY" firstAttribute="leading" secondItem="fC1-eq-VLC" secondAttribute="leading" constant="14" id="cT4-1t-HMl"/>
+                        <constraint firstItem="8WF-b7-nQp" firstAttribute="leading" secondItem="fC1-eq-VLC" secondAttribute="leading" id="pgG-uu-Iw7"/>
+                        <constraint firstAttribute="height" constant="64" id="we1-HI-jLj"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="1dA-XQ-szq">
+                    <rect key="frame" x="0.0" y="112" width="375" height="555"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Kl7-Fc-jkY"/>
+                        <outlet property="delegate" destination="-1" id="7kt-HH-z4q"/>
+                    </connections>
+                </tableView>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="搜索:手机通讯录" translatesAutoresizingMaskIntoConstraints="NO" id="uQJ-Ru-aAR">
+                    <rect key="frame" x="0.0" y="64" width="375" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="EA7-nq-Hq6"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uQJ-Ru-aAR" firstAttribute="top" secondItem="fC1-eq-VLC" secondAttribute="bottom" id="6gy-gh-VNT"/>
+                <constraint firstAttribute="trailing" secondItem="uQJ-Ru-aAR" secondAttribute="trailing" id="7fj-xZ-z0c"/>
+                <constraint firstItem="fC1-eq-VLC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="C5p-5m-yTg"/>
+                <constraint firstItem="1dA-XQ-szq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LEP-oy-8tC"/>
+                <constraint firstAttribute="trailing" secondItem="fC1-eq-VLC" secondAttribute="trailing" id="NVJ-uB-LPw"/>
+                <constraint firstAttribute="bottom" secondItem="1dA-XQ-szq" secondAttribute="bottom" id="Zxj-MQ-d9D"/>
+                <constraint firstAttribute="trailing" secondItem="1dA-XQ-szq" secondAttribute="trailing" id="hST-er-aX8"/>
+                <constraint firstItem="uQJ-Ru-aAR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kdI-n3-DBr"/>
+                <constraint firstItem="fC1-eq-VLC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="n6B-YL-VVp"/>
+                <constraint firstItem="1dA-XQ-szq" firstAttribute="top" secondItem="uQJ-Ru-aAR" secondAttribute="bottom" id="naH-Lm-pZZ"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+</document>
